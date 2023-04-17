@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="data:image/png;base64,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" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshata Ganbote</title>
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#toggleMobileMenu"
+    data-bs-offset="0"
+    tabindex="0"
+  >
+    <!-- ==== Header ==== -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light" id="header">
+        <div class="container">
+          <a class="navbar-brand" href="">
+            <img src = "./img/logo.png" width="250px"/>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#toggleMobileMenu"
+            aria-controls="toggleMobileMenu"
+            aria-expanded="false"
+            aria-table="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="toggleMobileMenu">
+            <ul class="navbar-nav ms-lg-auto">
+              <li class="nav-item">
+                <a href="#hero" aria-current="page" class="nav-link active"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#portfolio" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://drive.google.com/file/d/1eZt8_OyazYLAh-DAZJRBFaOrt8sW6gqQ/view?usp=share_link" class="nav-link">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ==== End Header ==== -->
+
+    <!-- ==== Hero ==== -->
+    <div id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 mt-lg-0 d-grid align-content-center">
+            <section
+              class="text-center text-lg-start"
+              data-aos="zoom-in"
+              data-aos-delay="1000"
+              data-aos-duration="1000"
+            >
+              <p>Hello! 👋 I'm</p>
+              <h1>Akshata Ganbote</h1>
+              <p><span id="headline"></span></p>
+              <!-- Social Media Links -->
+              <div class="social-links mx-auto mx-lg-0">
+                <div class="row">
+                  <div class="col-3">
+                    <a href="mailto:akshataganbote61843@gmail.com" target="_blank">
+                      <i class="bi bi-envelope-fill"></i>
+                    </a>
+                  </div>
+                  <div class="col-3">
+                    <a href="https://github.com/AkshataGanbote" target="_blank">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                  <div class="col-3">
+                    <a
+                      href="https://www.linkedin.com/in/akshata-ganbote-7a3847247/"
+                      target="_blank"
+                    >
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-12 col-lg-6 d-grid align-content-center">
+            <div
+              class="img-container"
+              id="img-wrapper"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="2000"
+            >
+              <div id="canvas"></div>
+
+              <div class="curtain">
+                <img
+                  src="./img/akshata.jpg"
+                  crossorigin=""
+                  data-sampler="simplePlaneTexture"
+                  width="400"
+                  height="400"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==== End Hero ==== -->
+
+    <main>
+      <!-- ==== About ==== -->
+      <div id="about" >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6 d-grid align-content-center">
+              <section
+                id="about_section"
+                class="my-5 my-lg-0"
+                data-aos="fade-right"
+                data-aos-mirror="true"
+                data-aos-duration="1500"
+              >
+                <h1>ABOUT ME</h1>
+                <p>⚡
+                  I’m an aspiring and determined Full Stack Web Developer, curious to explore different industry-standard tech stacks and environments.
+                </p>
+                <p>⚡
+                 I build websites using HTML, CSS, JavaScript, React.js and other libraries.
+                </p>
+                 <p>⚡I am a passionate person who pursues my dreams, who works hard and constantly work on improving myself seeking to achieve the best version of myself.  
+                </p>
+                <p>⚡
+                  I'm excited to collaborate with your team to bring your vision to life!
+                </p>
+              </section>
+            </div>
+            <!-- Skill Icons -->
+            <div class="col-12 col-lg-6 d-grid align-content-center">
+              <section
+                id="skills_section"
+                class="mb-5 mb-lg-0"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>SKILLS</h1>
+                <div class="row">
+                  <div class="col-6 col-md-4">
+                    <img src="./img/stack-icons/html.svg" alt="html" />
+                    <span>HTML</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img src="./img/stack-icons/css.svg" alt="css" />
+                    <span>CSS</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img
+                      src="./img/stack-icons/javascript.svg"
+                      alt="javascript"
+                    />
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img src="./img/stack-icons/react-js-icon.svg" alt="reactjs" />
+                    <span>React JS</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" />
+                    <span>Redux</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img 
+                      style="margin-left: 10px"
+                      src="./img/stack-icons/mongodb-icon.svg"
+                      alt="MongoDB"
+                    />
+                    <span style="margin-left: 15px;">MongoDB</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img src="./img/stack-icons/node-js-icon.svg" alt="node-js-icon" />
+                    <span>Node JS</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img src="./img/stack-icons/icons8-express-js.svg" alt="express" />
+                    <span>Express JS</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img  src="./img/stack-icons/java.svg" alt="Java" />
+                    <span style="margin-left: 15px">Java</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img src="./img/stack-icons/icons8-chakra-ui-48.png" alt="Chakra UI" />
+                    <span>Chakra UI</span>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" />
+                    <span>Git</span>
+                  </div>
+                  
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==== end About ==== -->
+
+      <!-- ==== Portfolio === -->
+      <section id="portfolio" class="">
+        <h1 class="mb-md-5">PROJECTS</h1>
+        <div class="container">
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-3">
+
+            <!-- Sugar -->
+            <div>
+              <div class="project" data-aos="flip-up" data-aos-duration="1000">
+                <img
+                  src="./img/portfolio/sugarF.jpeg"
+                  alt="Sugar"
+                />
+                <div class = "project-details">
+                  <p class= "project-heading">Sugar Cosmetics Clone</p>
+                  <div class="text-center"  style="font-size: 15px;" >Beauty Brand Website for Makeup Products
+                    <br/>Tech Stack : React, Redux, HTML, CSS, JS, Chakra UI, VSCode, Git <br/>Group Project : 4 Collaborators | Duration :06 Days
+                  </div>
+                    <div class="links_project">
+                      <a
+                        href="https://github.com/rushikesh226/Sugar-Cosmetics-Clone"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="source code"
+                        style="margin-right: 10px; text-decoration: none;"
+                      >
+                        <i class="bi bi-github"></i>
+                      </a>
+                      
+                      <a
+                        href="https://sugar-cosmetics-clone-masai-1.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="live demo"
+                      >
+                        <i class="bi bi-eye-fill"></i>
+                      </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dineout -->
+            <div>
+              <div class="project" data-aos="flip-up" data-aos-duration="1000">
+                <img
+                  src="./img/portfolio/dineoutf.jpeg"
+                  alt="Dineout"
+                />
+                <div class = "project-details">
+                <p class="project-heading">Dineout Clone</p>
+                <div class="text-center"  style="font-size: 15px;" >Platform to do free table booking in Restaurants
+                  <br/>Tech Stack : React, Redux, HTML, CSS, JS, Chakra UI, VSCode, Git<br/>Group Project : 5 Collaborators | Duration :06 Days
+                </div>
+                  <!-- <p class="text-center">Platform for customers to do free table booking in Restaurants</p>
+                  <p class="text-center" style="font-size: 20px;">Tech Stack: React, Redux, HTML, CSS, JS, Chakra UI, VSCode, Git</p>
+                  <p class="text-center" style="font-size: 15px;">Group Project : 5 Collaborators | Duration :06 Days</p> -->
+                    <div class="links_project">
+                      <a
+                        href="https://github.com/MOHDSHABANKHAN/dineout_website_clone"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="source code"
+                      >
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a
+                        href="https://reliable-tulumba-cdf387.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="live demo"
+                      >
+                        <i class="bi bi-eye-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <!-- Boat -->
+            <div>
+              <div class="project" data-aos="flip-up" data-aos-duration="1000">
+                <img
+                  src="./img/portfolio/boatF.png"
+                  alt="Home Decor WebApp"
+                />
+                <div class = "project-details">
+                  <p class="project-heading">Boat Lifestyle Clone</p>
+                  <div class="text-center"  style="font-size: 15px;" >India-Based Consumer Electronics Audio & Wearable Brand
+                    <br/>Tech Stack : HTML, CSS, Vanilla JS, VSCode, Git <br/>Group Project : 3 Collaborators | Duration :06 Days
+                  </div>
+                
+                  <!-- <p class="text-center">India-Based Consumer Electronics Audio & Wearable Brand</p>
+                  <p class="text-center" style="font-size: 20px;">Tech Stack: HTML, CSS,Vanilla JS, VSCode, Git</p>
+                  <p class="text-center" style="font-size: 15px;">Group Project : 3 Collaborators | Duration :06 Days</p> -->
+                    <div class="links_project">
+                      <a
+                        href="https://github.com/Prathamesh52-28/Boat_project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="source code"
+                      >
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a
+                        href="https://imaginative-tarsier-6b75ba.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="live demo"
+                      >
+                        <i class="bi bi-eye-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- KFC -->
+            <div>
+              <div class="project" data-aos="flip-up" data-aos-duration="1000">
+                <img
+                  src="./img/portfolio/kfcF.jpeg"
+                  alt="food Odering Web App"
+                />
+                <div class = "project-details">
+                <p class="project-heading">KFC Clone</p>
+                <div class="text-center"  style="font-size: 15px;" >Online Food Odering Web App
+                  <br/>Tech Stack : HTML, CSS, JS, JSON Server, ES6+, VSCode, Git <br/>Group Project : 4 Collaborators | Duration :06 Days
+                </div>
+                  <!-- <p class="text-center">Online Food Odering Web App</p>
+                  <p class="text-center" style="font-size: 20px;">Tech Stack: HTML, CSS, JS, JSON Server,ES6+, VSCode, Git</p>
+                  <p class="text-center" style="font-size: 15px;">Group Project : 4 Collaborators | Duration :06 Days</p> -->
+                    <div class="links_project">
+                      <a
+                        href="https://github.com/MOHDSHABANKHAN/KFC-clone"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="source code"
+                      >
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a
+                        href="https://gilded-tapioca-ca26b0.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="live demo"
+                      >
+                        <i class="bi bi-eye-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- ==== End Portfolio === -->
+<br><br><br>
+
+
+<section id="portfolio" class="">
+  <h1 class="mb-md-5">Github Contribution</h1>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-3">
+      <div>
+        <div class="project" data-aos="flip-up" data-aos-duration="1000">
+          <p align="center"><img align="center" width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=AkshataGanbote&show_icons=true&locale=en&theme=tokyonight" alt="AkshataGanbote" /></p>
+          </div>
+          </div>
+          <div>
+          <div class="project" data-aos="flip-up" data-aos-duration="1000">
+            <p align="center" style="margin-top:-25px;">&nbsp;<img  align="center" width="100%" style="height:180px" src="https://github-readme-stats.vercel.app/api?username=AkshataGanbote&show_icons=true&locale=en&theme=tokyonight" alt="AkshataGanbote" /></p>
+            </div>
+          </div>
+          <div>
+            <div class="project" data-aos="flip-up" data-aos-duration="1000">
+              <p align="center"><img align="center" width="80%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AkshataGanbote&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" alt="AkshataGanbote" />
+              </p>
+              </div>
+            </div>
+         
+          </div>
+          </div>
+          </section>
+          <!-- === Contact ====  -->
+      <div id="contact">
+        <section>
+          <div class="container">
+            <h1>CONTACT ME</h1>
+            <div class="row">
+              <div
+                class="hello mb-4 mb-lg-0 col-12 col-lg-4 d-grid align-content-center"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <span>Let's connect</span>
+                <p>
+                  Have cool idea for new project? 
+                  Want to build a cool website? 
+                  Don't hesitate to contact me.
+                </p>
+
+                <div class="mt-5 more_info">
+                  <p>
+                    <i class="bi bi-geo-alt text-accent me-2 fs-5"></i>
+                    Pune, Maharashtra, India
+                  </p>
+
+                  <p>
+                    <i class="bi bi-envelope-fill text-accent me-2 fs-5"></i>
+                    akshataganbote61843@gmail.com
+                  </p>
+
+                  <p style="font-family: sans-serif">
+                    <i class="bi bi-telephone-fill text-accent me-2 fs-5"></i>
+                    +91 82085 84156
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="contact_form col-12 col-lg-8 d-grid align-content-center"
+              >
+                <form
+                  action=""
+                  id="contact_form"
+                  name="portfolio_form"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Your Name"
+                        class="form-control"
+                        required
+                      />
+                      <div class="invalid-feedback small_label">
+                        Please enter at least 2 character
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Your Email"
+                        class="form-control"
+                        required
+                      />
+                      <div class="invalid-feedback small_label">
+                        Please enter a valid email
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-12 mt-3">
+                      <input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        placeholder="Subject"
+                        class="form-control"
+                        required
+                      />
+                      <div class="invalid-feedback small_label">
+                        Please enter a subject
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-12 mt-3">
+                      <textarea
+                        name="message"
+                        id="message"
+                        placeholder="Message"
+                        class="form-control"
+                        rows="5"
+                        maxlength="400"
+                        style="max-height: 300px"
+                        required
+                      ></textarea>
+                      <div class="invalid-feedback small_label">
+                        Please enter more than 5 word
+                      </div>
+                      <div
+                        class="valid-feedback text-end"
+                        style="font-family: sans-serif"
+                      ></div>
+                    </div>
+                    <!-- <div class="mt-3"></div> -->
+                    <div class="col-12 mt-3">
+                      <p class="thanks">Thank you. I will reply soon.</p>
+                    </div>
+                    <div class="mt-3 text-center text-lg-end">
+                      <button
+                        class="btn rounded-pill bg-accent text-white mx-auto"
+                        type="submit"
+                        id="send"
+                        disabled
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                    <div
+                      class="spinner-border text-accent mx-auto"
+                      role="status"
+                    >
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- ==== End Contact ====  -->
+    </main>
+
+    <!-- ==== Start footer ====  -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2">
+          <p>
+            Made with ❤️ by
+            <a href="https://www.linkedin.com/in/akshata-ganbote-7a3847247/">Akshata Ganbote</a>
+          </p>
+
+          <div class="text-center text-lg-end">
+            <a href="mailto:akshataganbote61843@gmail.com" target="_blank">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+
+            <a href="https://github.com/AkshataGanbote" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/akshata-ganbote-7a3847247/" target="_blank">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ==== End footer ====  -->
+
+    <!-- ==== Dark/Light mode button === -->
+    <button id="theme">
+      <i class="bi bi-moon-fill"></i>
+      <i class="bi bi-brightness-high-fill"></i>
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
